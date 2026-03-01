@@ -16,6 +16,7 @@
 ## 快速开始
 
 ```bash
+git clone https://github.com/cyontheway/claude-session-dashboard.git
 cd claude-session-dashboard
 npm install
 npm start
