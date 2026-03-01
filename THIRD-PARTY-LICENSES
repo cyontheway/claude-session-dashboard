@@ -1,0 +1,54 @@
+# Third-Party Licenses
+
+This project uses the following third-party libraries:
+
+---
+
+## highlight.js
+
+- Version: 11.9.0
+- License: BSD-3-Clause
+- Copyright: Copyright (c) 2006, Ivan Sagalaev.
+- Source: https://github.com/highlightjs/highlight.js
+- Usage: Code syntax highlighting in the browser (loaded via CDN)
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+---
+
+## qs
+
+- Version: 6.14.2
+- License: BSD-3-Clause
+- Copyright: Copyright (c) 2014, Nathan LaFreniere and other contributors.
+- Source: https://github.com/ljharb/qs
+- Usage: Query string parsing (indirect dependency of Express)
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+---
+
+## Express, cors, and all other npm dependencies
+
+Licensed under MIT or ISC. Full license texts are included in their
+respective directories under `node_modules/` after `npm install`.
