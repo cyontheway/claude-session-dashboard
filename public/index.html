@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+
+<div class="health-banner" id="health-banner"></div>
+
+<!-- Left: Projects -->
+<div id="projects-panel">
+  <div class="panel-header">
+    <span class="icon">⚙</span> Session Dashboard
+    <button class="theme-toggle" id="theme-toggle" title="切换深浅主题">🌙</button>
+  </div>
+  <div class="all-sessions-btn active" id="all-sessions-btn">
+    <span>📋 All Sessions</span>
+    <span class="badge" id="total-sessions-badge">0</span>
+  </div>
+  <div class="section-label">PROJECTS (<span id="project-count">0</span>)</div>
+  <div id="projects-list"></div>
+  <div class="source-toggle" id="source-toggle">
+    <button class="source-btn active" data-source="live">Live</button>
+    <button class="source-btn" data-source="backup">Backup</button>
+  </div>
+  <button class="refresh-btn" id="refresh-btn" title="刷新数据并释放搜索缓存">🔄 刷新 / 清缓存</button>
+  <button class="refresh-btn" id="backup-btn" title="备份会话数据到本地">💾 Backup</button>
+</div>
+
+<div class="resize-handle" id="resize-handle-1"></div>
+
+<!-- Middle: Sessions -->
+<div id="sessions-panel">
+  <div class="sessions-header" id="sessions-header">
+    <span id="sessions-header-text">ALL SESSIONS</span>
+    <button class="empty-toggle-btn" id="empty-toggle-btn" style="display:none">🔍 显示空会话</button>
+  </div>
+  <div class="search-box">
+    <div class="search-row">
+      <input type="text" id="search-input" placeholder="🔍 搜索会话内容...">
+      <button class="deep-search-btn" id="deep-search-btn" title="搜索全部会话（默认仅扫描最近 50 个）">搜全部</button>
+      <button class="filter-toggle-btn" id="filter-toggle-btn" title="日期筛选">📅</button>
+    </div>
+    <div class="filter-row" id="filter-row" style="display:none">
+      <input type="date" id="date-from" placeholder="开始日期">
+      <span class="filter-separator">至</span>
+      <input type="date" id="date-to" placeholder="结束日期">
+      <button class="filter-clear-btn" id="filter-clear-btn" title="清除筛选">✕</button>
+    </div>
+  </div>
+  <div class="search-status" id="search-status"></div>
+  <div class="stats-bar" id="stats-bar">
+    <span class="stat-item" id="stats-text">Select a project to view sessions</span>
+  </div>
+  <div id="sessions-list">
+    <div class="sessions-empty">Select a project from the left panel</div>
+  </div>
+</div>
+
+<div class="resize-handle" id="resize-handle-2"></div>
+
+<!-- Right: Detail -->
+<div id="detail-panel">
+  <div id="detail-content">
+    <div class="detail-empty">Select a session to view its messages</div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
